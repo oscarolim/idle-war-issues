@@ -1,0 +1,42 @@
+name: Translation
+description: Suggest a better translation for a text in the game
+title: "[Translation] "
+labels: ["translation"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping with the translation. One text per issue is easiest to check.
+  - type: dropdown
+    id: language
+    attributes:
+      label: Language
+      options:
+        - Português (European Portuguese)
+    validations:
+      required: true
+  - type: input
+    id: where
+    attributes:
+      label: Where in the game
+      description: The screen or moment, e.g. "Settings, Saves" or "Volume I mission 3, second message"
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current text
+      description: The text as the game shows it now
+    validations:
+      required: true
+  - type: textarea
+    id: suggested
+    attributes:
+      label: Suggested text
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why (optional)
+      description: E.g. a wrong meaning, unnatural wording, or a typo
